@@ -1,0 +1,381 @@
+Python Multiple-Choice Questions
+1. Find the invalid variable among the following:
+
+a. 1st_string
+
+b. my_string_1
+
+c. _
+
+d. foo
+
+Answer: (a) 1st_string
+
+2. The order of precedence in the Python language is:
+
+A) Exponential
+
+B) Parentheses
+
+C) Division
+
+D) Multiplication
+
+E) Subtraction
+
+F) Addition
+
+a. B,A,D,C,F,E
+
+b. A,B,D,C,F,E
+
+c. A,B,C,D,E,F
+
+d. B,A,D,C,E,F
+
+Answer: (a) B,A,D,C,F,E
+
+3. Which one of these is incorrect?
+
+a. float(‘nan’)
+
+b. float(‘inf’)
+
+c. float(’12+34′)
+
+d. float(’56’+’78’)
+
+Answer: (c) float(’12+34′)
+
+4. The value of the Python expression given below would be:
+
+4+2**5//10
+
+a. 77
+
+b. 0
+
+c. 3
+
+d. 7
+
+Answer: (d) 7
+
+5. The return value for trunc() would be:
+
+a. bool
+
+b. float
+
+c. int
+
+d. None
+
+Answer: (c) int
+
+6. What is the output of the Python code given below, if the date of the system is June 21st, 2017 (Wednesday)?
+
+[] or {}
+{} or []
+
+a.
+
+[] []
+b.
+
+[]
+{}
+
+c.
+
+{}
+
+{}
+
+d.
+
+{}
+
+[]
+Answer: (d)
+
+{}
+
+[]
+7. The output of this Python code would be:
+
+s='{0}, {1}, and {2}’
+
+s.format(‘hi’, ‘great’, ‘day’)
+
+a. ‘hi, great, and day’
+
+b. ‘hi great and day’
+
+c. ‘hi, great, day’
+
+d. Error
+
+Answer: (a) ‘hi, great, and day’
+
+8. The output of this Python code would be:
+
+a = [‘mn’, ‘op’]
+
+for i in a:
+
+i.upper()
+
+print(a)
+
+a. [None, None]
+
+b. [‘MN’, ‘OP’]
+
+c. [‘mn’, ‘op’]
+
+d. None of the above
+
+Answer: (c) [‘mn’, ‘op’]
+
+9. The output of this Python code would be:
+
+print(“mno. PQR”.capitalize())
+
+a. Mno. Pqr
+
+b. Mno. pqr
+
+c. MNO. PQR
+
+d. mno. pqr
+
+Answer: (b) Mno. pqr
+
+10. Which arithmetic operators can we NOT use with strings?
+
+a. –
+
+b. +
+
+c. *
+
+d. All of the above
+
+Answer: (a) –
+
+11. Which function do we use to shuffle a list(say list1)?
+
+a. shuffle(list1)
+
+b. list1.shuffle()
+
+c. random.shuffleList(list1)
+
+d. random.shuffle(list1)
+
+Answer: (d) random.shuffle(list1)
+
+12. In the following statements of Python, which ones will result into the output: 6?
+
+A = [[1, 2, 3],
+
+[4, 5, 6],
+[7, 8, 9]]
+a. A[3][2]
+
+b. A[2][3]
+
+c. A[1][2]
+
+d. A[2][1]
+
+Answer: (c) A[1][2]
+
+13. Is this code valid in Python?
+
+>>> m=6,7,8,9
+
+>>> m
+
+a. No, many values will unpack
+
+b. Yes, (6,7,8,9) will be printed
+
+c. Yes, 6 will be printed
+
+d. Yes, [6,7,8,9] will be printed
+
+Answer: (b) Yes, (6,7,8,9) will be printed
+
+14. Which function removes a set’s first and the last element from a list?
+
+a. pop
+
+b. remove
+
+c. dispose
+
+d. discard
+
+Answer: (a) pop
+
+15. The output of this Python code would be:
+
+>>> x={1:”X”,2:”Y”,3:”Z”}
+
+>>> del x
+
+a. the del method does not exist for dictionary
+
+b. the del would delete the values present in dictionary
+
+c. the del would delete the entire dictionary
+
+d. the del would delete all the keys in dictionary
+
+Answer: (d) the del would delete all the keys in dictionary
+
+16. The output of this Python code would be:
+
+sum(1,2,3)
+
+sum([2,4,6])
+
+a. 6, 12
+
+b. Error, Error
+
+c. Error, 12
+
+d. 6, Error
+
+Answer: (c) Error, 12
+
+17. The output of this Python code would be:
+
+def find(x, **y):
+
+print(type(y))
+
+find(‘letters’,X=’1′,Y=’2′)
+
+a. Dictionary
+
+b. An exception is thrown
+
+c. String
+
+d. Tuple
+
+Answer: (a) Dictionary
+
+18. Which one of these is NOT true about recursion?
+
+a. We can replace a recursive function by a non-recursive function
+
+b. The memory space taken by the recursive functions is more than that of non-recursive function
+
+c. Running a recursive function is faster as compared to a non-recursive function
+
+d. The process of recursion makes it easier for users to understand a program
+
+Answer: (c) Running a recursive function is faster as compared to a non-recursive function
+
+19. The output of this Python code would be:
+
+a = [‘mn’, ‘op’]
+
+print(len(list(map(list, a))))))
+
+a. 4
+
+b. 2
+
+c. Not specified
+
+d. Error
+
+Answer: (d) Error
+
+20. Which of these functions can NOT be defined under the sys module?
+
+a. sys.argv
+
+b. sys.readline
+
+c. sys.path
+
+d. sys.platform
+
+Answer: (b) sys.readline
+
+21. Which function doesn’t accept any argument?
+
+a. re.compile
+
+b. re.findall
+
+c. re.match
+
+d. re.purge
+
+Answer: (d) re.purge
+
+22. In Python, the primary use of the tell() method is that:
+
+a. within the file, it tells the end position
+
+b. within the file, it tells the current position
+
+c. it tells us if the file is opened
+
+d. none of the above
+
+Answer: (b) within the file, it tells the current position
+
+23. The hasattr(obj,name) is used to:
+
+a. check if any specific attribute exists
+
+b. set an attribute
+
+c. access the object’s attribute
+
+d. delete an attribute
+
+Answer: (a) check if any specific attribute exists
+
+24. Find out the private data field among the following:
+
+def __init__(self):
+
+__m = 1
+
+self.__n = 1
+
+self.__o__ = 1
+
+__p__= 1
+
+a. __m
+
+b. __n
+
+c. __o__
+
+d. __p__
+
+Answer: (b) __n
+
+25. In Python, find which one isn’t an exception handling keyword.
+
+a. accept
+
+b. finally
+
+c. try
+
+d. except
+
+Answer: (a) accept
