@@ -1,0 +1,154 @@
+Maven is a project management and comprehension tool that provides developers a complete build lifecycle framework. 
+Development team can automate the project's build infrastructure in almost no time as Maven uses a standard directory layout and a default build lifecycle.
+In case of multiple development teams environment, Maven can set-up the way to work as per standards in a very short time. As most of the project setups are simple and reusable, 
+Maven makes life of developer easy while creating reports, checks, build and testing automation setups.
+Maven is a powerful project management tool that is based on POM (project object model).
+Maven provides developers ways to manage the following −
+1. Builds
+2. Documentation
+3. Reporting
+4. Dependencies
+5. SCMs
+6. Releases
+7. Distribution
+8. Mailing list
+
+Step 1 - Verify Java Installation in Your Machine
+Step 2 - Set JAVA Environment
+Step 3 - Download Maven Archive
+Step 4 - Extract the Maven Archive
+Step 5 - Set Maven Environment Variables
+Step 6 - Add Maven bin Directory Location to System Path
+Step 7 - Verify Maven Installation
+
+ANT stands for Another Neat Tool. It is a Java-based build tool from Apache.
+Ant is used to simplify the mundane tasks such as compiling the code, packaging the binaries, deploying the binaries to the test server, 
+testing the changes, copying the code from one location to another etc. It is an Operating System build and deployment tool that can be executed from the command line.
+Ant and maven both are build tools.They both can be used for compile, pulling dependence from repository and for creating war or ear files. Both are provided by the Apache.
+Ant is a tool and it doesn't have formal conventions. If you are using Ant then you have to tell what to do in XML files therefore it can't be used in different types of project setup.
+Maven is framework and it can also  act as a dependency management tool. 
+It is declarative build tool so everything we can define in the pom.xml. 
+
+In Maven terminology, a repository is a directory where all the project jars, library jar, plugins or any other project specific artifacts are stored and can be used by Maven easily.
+Maven repository are of three types. The following illustration will give an idea regarding these three types.
+local
+central
+remote
+Maven local repository is a folder location on your machine. It gets created when you run any maven command for the first time.
+Maven local repository keeps your project's all dependencies (library jars, plugin jars etc.). When you run a Maven build, 
+then Maven automatically downloads all the dependency jars into the local repository. It helps to avoid references 
+to dependencies stored on remote machine every time a project is build.
+Maven local repository by default get created by Maven in %USER_HOME% directory. To override the default location,
+mention another path in Maven settings.xml file available at %M2_HOME%\conf directory.
+
+Maven central repository is repository provided by Maven community. It contains a large number of commonly used libraries.
+When Maven does not find any dependency in local repository.
+Key concepts of Central repository are as follows −
+This repository is managed by Maven community.
+It is not required to be configured.
+It requires internet access to be searched.
+
+Sometimes, Maven does not find a mentioned dependency in central repository as well. 
+It then stops the build process and output error message to console. 
+To prevent such situation, Maven provides concept of Remote Repository, which is developer's own custom repository containing required libraries or other project jars.
+
+Maven is actually a plugin execution framework where every task is actually done by plugins. Maven Plugins are generally used to −
+create jar file
+create war file
+compile code files
+unit testing of code
+create project documentation
+create project reports
+
+A plugin generally provides a set of goals, which can be executed using the following syntax −
+mvn [plugin-name]:[goal-name]
+
+For example, a Java project can be compiled with the maven-compiler-plugin's compile-goal by running the following command.
+mvn compiler:compile
+Plugins are specified in pom.xml using plugins element.
+Each plugin can have multiple goals.
+You can define phase from where plugin should starts its processing using its phase element. We've used clean phase.
+You can configure tasks to be executed by binding them to goals of plugin. We've bound echo task with run goal of maven-antrun-plugin.
+Maven will then download the plugin if not available in local repository and start its processing.
+
+Some common Maven Commands
+
+
+Maven Command															Description
+
+mvn --version											Prints out the version of Maven you are running.
+mvn clean											Clears the target directory into which Maven normally builds your project.
+mvn package											Builds the project and packages the resulting JAR file into the target directory.
+mvn package -Dmaven.test.skip=true							Builds the project and packages the resulting JAR file into the target directory - without running the unit tests during the build.
+mvn clean package										Clears the target directory and Builds the project and packages the resulting JAR file into the target directory.
+mvn clean package -Dmaven.test.skip=true						Clears the target directory and builds the project and packages the resulting JAR file into the target directory - without running the unit tests during the build.
+mvn verify											Runs all integration tests found in the project.
+mvn clean verify										Cleans the target directory, and runs all integration tests found in the project.
+mvn install											Builds the project described by your Maven POM file and installs the resulting artifact (JAR) into your local Maven repository
+mvn install -Dmaven.test.skip=true							Builds the project described by your Maven POM file without running unit tests, and installs the resulting artifact (JAR) into your local Maven repository
+mvn clean install										Clears the target directory and builds the project described by your Maven POM file and installs the resulting artifact (JAR) into your local Maven repository
+mvn clean install -Dmaven.test.skip=true						Clears the target directory and builds the project described by your Maven POM file without running unit tests, and installs the resulting artifact (JAR) into your local Maven repository
+mvn dependency:copy-dependencies							Copies dependencies from remote Maven repositories to your local Maven repository.
+mvn clean dependency:copy-dependencies							Cleans project and copies dependencies from remote Maven repositories to your local Maven repository.
+mvn clean dependency:copy-dependencies package					Cleans project, copies dependencies from remote Maven repositories to your local Maven repository and packages your project.
+mvn dependency:tree										Prints out the dependency tree for your project - based on the dependencies configured in the pom.xml file.
+mvn dependency:tree -Dverbose								Prints out the dependency tree for your project - based on the dependencies configured in the pom.xml file. Includes repeated, transitive dependencies.
+mvn dependency:tree -Dincludes=com.fasterxml.jackson.core				Prints out the dependencies from your project which depend on the com.fasterxml.jackson.core artifact.
+mvn dependency:tree -Dverbose -Dincludes=com.fasterxml.jackson.core		Prints out the dependencies from your project which depend on the com.fasterxml.jackson.core artifact. Includes repeated, transitive dependencies.
+mvn dependency:build-classpath								Prints out the classpath needed to run your project (application) based on the dependencies configured in the pom.xml file.
+
+Step 1: Create A New Maven Project
+First, we will create a new maven project. For this, we will open our Eclipse IDE then Go to File > New > Maven Project. 
+Once we click on Maven Project we will get a prompt for setting up our Workspace location.
+After setting Workspace location according to our choice. We will click on Next to go to further project setup steps.
+
+Step 2: Setting Up Archetype
+In this step, we will setup the archetype for our maven project. Archetype is a templating toolkit. 
+It provides a templating solution for your project and helps to create a sample project structure that you can extend based on your business requirements. 
+For this tutorial, we will use the maven-archetype-j2ee-simple archetype for our project.
+After choosing the archetype we will click on Next and it will ask for the details like Group Id, Artifact Id, and Package information.
+
+Group Id – It’s a unique identifier to uniquely identify the project in a maven repository.
+Artifact Id – It’s basically the project name.
+
+After adding all these details we need to click on the Finish button. Maven will start creating your project and after a few seconds, your project will be created.
+POM stands for Project Object Model. It is fundamental unit of work in Maven. It is an XML file that resides in the base directory of the project as pom.xml.
+The POM contains information about the project and various configuration detail used by Maven to build the project(s).
+It should be noted that there should be a single POM file for each project.
+All POM files require the project element and three mandatory fields: groupId, artifactId, version.
+Projects notation in repository is groupId:artifactId:version.
+Before creating a POM, we should first decide the project group (groupId), its name (artifactId) and its version as these attributes help in uniquely identifying the project in repository.
+
+
+>> POM refers to Project Object Model. It is an XML file which contains the information about the project and 
+various configuration detail used by Maven to build the project like build directory, source directory, dependencies, test source directory, plugin, goals etc. 
+The POM file should be in the project’s root directory.
+POM also contains the goals and plugins. While executing a task or goal, Maven looks for the POM in the current directory. 
+It reads the POM, gets the needed configuration information, and then executes the goal. Some of the configuration that can be specified in the POM are following −
+
+project dependencies
+plugins
+goals
+build profiles
+project version
+developers
+mailing list
+
+The main difference between groupId and artifactId in Maven is that the groupId specifies the id of the project group while the artifactId specifies the id of the project.
+It is required to use third party libraries when developing a project. 
+The programmer can download and add these third-party libraries to the project, but it is difficult to update them later. 
+Maven provides a solution to this issue. It helps to include all the dependencies required for the project. 
+Moreover, the programmer can specify the required dependencies in the POM.XML file. 
+It has the configuration information to build the project. 
+Furthermore, this file consists of several XML elements, and two of them are groupId and artifactId.
+
+The groupId is an XML element in the POM.XML file of a Maven project that specifies the id of the project group. 
+In contrast, artifactId is an XML element in the POM.XML of a Maven project that specifies the id of the project (artifact). 
+Thus, this is the main difference between groupId and artifactId in Maven.
+Furthermore, another difference between groupId and artifactId in Maven is that groupId helps to identify the project group while artifactId helps to identify the project.
+
+Eases the building process for any project.
+It maintains uniformity throughout the entire build process.
+It’s very important to understand the project that we are working on. It provides comprehensive information about the project.
+To ensure quality in a project, it’s necessary to develop it in the best possible manner, and It provides the guidelines to do just that.
+Often in a project, it’s required to migrate to new features, and with it, the migration is simplified.
